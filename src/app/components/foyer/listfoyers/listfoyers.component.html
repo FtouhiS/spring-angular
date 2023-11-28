@@ -1,0 +1,29 @@
+<!-- list-chambre.component.html -->
+<div class="container mt-5">
+    <h2>Liste des foyers</h2>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom Foyer</th>
+          <th scope="col">Capacite</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of foyers">
+          <th scope="row">{{ f.id }}</th>
+          <td>{{ f.nomFoyer }}</td>
+          <td>{{ f.capacite }}</td>
+          <td>
+            <a (click)="deleteFoyer(f.id)" class="btn btn-danger">Delete</a>
+          </td>
+          <td>
+            <a (click)="updateFoyer(f.id)"class="btn btn-primary">Update</a>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

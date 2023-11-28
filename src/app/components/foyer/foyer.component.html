@@ -1,0 +1,23 @@
+<form [formGroup]="foyerform" (ngSubmit)="addFoyer()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nom Foyer</label>
+        <input type="text" class="form-control" formControlName="nomFoyer">
+        <div class="alert alert-danger" *ngIf="foyerform.get('nomFoyer')?.invalid && (foyerform.get('nomFoyer')?.touched || foyerform.get('nomFoyer')?.dirty)">
+            <div *ngIf="foyerform.get('nomFoyer')?.errors?.['required']">Nom Foyer is required!</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Capacite</label>
+        <input type="number" class="form-control" formControlName="capacite">
+        <div class="alert alert-danger" *ngIf="foyerform.get('capacite')?.invalid && (foyerform.get('capacite')?.touched || foyerform.get('capacite')?.dirty)">
+            <div *ngIf="foyerform.get('capacite')?.errors?.['required']">Capacite is required!</div>
+        </div>
+    </div>
+
+   
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" [disabled]="foyerform.invalid">
+    </div>
+</form>
+
+

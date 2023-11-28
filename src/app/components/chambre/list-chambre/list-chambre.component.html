@@ -1,0 +1,29 @@
+<!-- list-chambre.component.html -->
+<div class="container mt-5">
+    <h2>Liste des Chambres</h2>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Numéro de Chambre</th>
+          <th scope="col">Type</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of chambres">
+          <th scope="row">{{ c.id }}</th>
+          <td>{{ c.numeroChambre }}</td>
+          <td>{{ c.typeC }}</td>
+          <td>
+            <a (click)="deleteChambre(c.id)" class="btn btn-danger">Delete</a>
+          </td>
+          <td>
+            <a (click)="updateChambre(c.id)"class="btn btn-primary">Update</a>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

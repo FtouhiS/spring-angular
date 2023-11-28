@@ -1,0 +1,27 @@
+<form [formGroup]="chambreForm" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Numero Chambre</label>
+        <input type="number" class="form-control" formControlName="numeroChambre">
+        <div class="alert alert-danger" *ngIf="chambreForm.get('numeroChambre')?.invalid && (chambreForm.get('numeroChambre')?.touched || chambreForm.get('numeroChambre')?.dirty)">
+            <div *ngIf="chambreForm.get('numeroChambre')?.errors?.['required']">Numero Chambre is required!</div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="TypeChambre">Type Chambre</label>
+        <select id="TypeChambre" class="form-select" formControlName="typeC">
+            <option value="" disabled selected>Select Type</option>
+            <option value="SIMPLE">SIMPLE</option>
+            <option value="DOUBLE">DOUBLE</option>
+            <option value="TRIPLE">TRIPLE</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="chambreForm.get('typeC')?.invalid && (chambreForm.get('typeC')?.touched || chambreForm.get('typeC')?.dirty)">
+            <div *ngIf="chambreForm.get('typeC')?.errors?.['required']">Type Chambre is required!</div>
+        </div>
+    </div>
+
+    <div class="update">
+            <button class=" btn-primary" type="submit" (click)="updateChambre()">Update</button>
+              </div>
+</form>
+

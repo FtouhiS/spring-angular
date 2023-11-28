@@ -1,0 +1,102 @@
+{
+  "chambres": [
+    {
+      "numeroChambre": 111,
+      "typeC": "TRIPLE",
+      "id": 3
+    },
+    {
+      "numeroChambre": 124,
+      "typeC": "SIMPLE",
+      "id": 5
+    },
+    {
+      "numeroChambre": 145,
+      "typeC": "SIMPLE",
+      "id": 6
+    }
+  ],
+  "universites": [
+    {
+      "nomUniversite": "testtest",
+      "adresse": "test",
+      "image": "",
+      "id": 1
+    },
+    {
+      "nomUniversite": "azert",
+      "adresse": "azert",
+      "image": "",
+      "id": 2
+    }
+  ],
+  "foyers": [
+    {
+      "nomFoyer": "KARENA",
+      "capacite": 3000,
+      "id": 1
+    },
+    {
+      "nomFoyer": "ESPRIT",
+      "capacite": 2000,
+      "id": 2
+    },
+    {
+      "nomFoyer": "NOUR",
+      "capacite": 4120,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "nom": "soulaima",
+      "prenom": "ftouhi",
+      "cin": "tunis",
+      "dateNaissance": "2023-11-13",
+      "email": "soulaima.ftouhi@esprit.tn",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 1
+    },
+    {
+      "nom": "",
+      "prenom": "",
+      "cin": "",
+      "dateNaissance": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 2
+    },
+    {
+      "nom": "",
+      "prenom": "",
+      "cin": "",
+      "dateNaissance": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 3
+    },
+    {
+      "nom": "manar",
+      "prenom": "elkefi",
+      "cin": "tunis",
+      "dateNaissance": "2023-11-23",
+      "email": "manar.elkefi@esprit.tn",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 4
+    },
+    {
+      "nom": "amine",
+      "prenom": "salmen",
+      "cin": "Ariana essoghra cebalet ben ammar",
+      "dateNaissance": "2023-11-14",
+      "email": "amine.salmen@esprit.tn",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<form [formGroup]="unversiteForm" (ngSubmit)="addUniversite()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nom Universite</label>
+        <input type="text" class="form-control" formControlName="nomUniversite">
+        <div class="alert alert-danger" *ngIf="unversiteForm.get('nomUniversite')?.invalid && (unversiteForm.get('nomUniversite')?.touched || unversiteForm.get('numeroChambre')?.dirty)">
+            <div *ngIf="unversiteForm.get('nomUniversite')?.errors?.['required']">Nom Universite is required!</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Adresse</label>
+        <input type="text" class="form-control" formControlName="adresse">
+        <div class="alert alert-danger" *ngIf="unversiteForm.get('adresse')?.invalid && (unversiteForm.get('adresse')?.touched || unversiteForm.get('adresse')?.dirty)">
+            <div *ngIf="unversiteForm.get('adresse')?.errors?.['required']">Adresse is required!</div>
+        </div>
+    </div>
+   
+
+  
+
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" [disabled]="unversiteForm.invalid">
+    </div>
+</form>
+

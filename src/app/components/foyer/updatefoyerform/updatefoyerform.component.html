@@ -1,0 +1,24 @@
+<form [formGroup]="foyerForm" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nom Foyer</label>
+        <input type="text" class="form-control" formControlName="nomFoyer">
+        <div class="alert alert-danger" *ngIf="foyerForm.get('nomFoyer')?.invalid && (foyerForm.get('nomFoyer')?.touched || foyerForm.get('nomFoyer')?.dirty)">
+            <div *ngIf="foyerForm.get('nomFoyer')?.errors?.['required']">Nom Foyer is required!</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Capacite</label>
+        <input type="number" class="form-control" formControlName="capacite">
+        <div class="alert alert-danger" *ngIf="foyerForm.get('capacite')?.invalid && (foyerForm.get('capacite')?.touched || foyerForm.get('capacite')?.dirty)">
+            <div *ngIf="foyerForm.get('capacite')?.errors?.['required']">Capacite is required!</div>
+        </div>
+    </div>
+
+   
+    <div class="update">
+        <button class=" btn-primary" type="submit" (click)="updateFoyer()">Update</button>
+          </div>
+</form>
+
+
+

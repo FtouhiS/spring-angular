@@ -1,0 +1,26 @@
+<form [formGroup]="universiteForm" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nom Universite</label>
+        <input type="text" class="form-control" formControlName="nomUniversite">
+        <div class="alert alert-danger" *ngIf="universiteForm.get('nomUniversite')?.invalid && (universiteForm.get('nomUniversite')?.touched || universiteForm.get('numeroChambre')?.dirty)">
+            <div *ngIf="universiteForm.get('nomUniversite')?.errors?.['required']">Nom Universite is required!</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Adresse</label>
+        <input type="text" class="form-control" formControlName="adresse">
+        <div class="alert alert-danger" *ngIf="universiteForm.get('adresse')?.invalid && (universiteForm.get('adresse')?.touched ||universiteForm.get('adresse')?.dirty)">
+            <div *ngIf="universiteForm.get('adresse')?.errors?.['required']">Adresse is required!</div>
+        </div>
+    </div>
+   
+
+  
+
+   
+    <div class="update">
+        <button class=" btn-primary" type="submit" (click)="updateUniversite()">Update</button>
+          </div>
+</form>
+
+
